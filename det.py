@@ -16,7 +16,7 @@ while True:
         roi_color = img[y:y+h, x:x+w]
         eyes = eye_cascade.detectMultiScale(roi_gray)
         for (ex, ey, ew, eh) in eyes:
-            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+wh),(0,255,0),2)
+            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
 
     cv2.imshow('img',img)
     k = cv2.waitKey(30) & 0xff
